@@ -41,7 +41,9 @@ public class OrderEntity implements Entity<String> {
    */
   public OrderEntity createOrder(VO showBuildVO) {
     try {
+      //构造
       OrderEntity showEntity = orderEntityFactory.perfect(null);
+      //持久化 insert
       return showEntity;
     } catch (DddShowCodeSpiException e) {
       throw new DddShowCodeDomainException(Errors.DEFAULT_PARAM_VALID_ERROR.getCode(),
