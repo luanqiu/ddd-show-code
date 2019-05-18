@@ -22,8 +22,8 @@ public class OrderApp {
   private OrderEntityFactory orderEntityFactory;
 
   public void createOrderUseFactory() {
-    OrderEntity showEntity = orderEntityFactory.perfect(null);
-    showEntity.insert();
+    OrderEntity orderEntity = orderEntityFactory.perfect(null);
+    orderEntity.insert();
   }
 
 

@@ -30,21 +30,12 @@ public class OrderEntity implements Entity<String> {
   @Resource
   private OrderEntityFactory orderEntityFactory;
 
-  @Override
-  public String getUniqueId() {
-    return null;
-  }
-
-
-  /**
-   * show创建
-   */
   public OrderEntity createOrder(VO showBuildVO) {
     try {
       //构造
-      OrderEntity showEntity = orderEntityFactory.perfect(null);
+      OrderEntity orderEntity = orderEntityFactory.perfect(null);
       //持久化 insert
-      return showEntity;
+      return orderEntity;
     } catch (DddShowCodeSpiException e) {
       throw new DddShowCodeDomainException(Errors.DEFAULT_PARAM_VALID_ERROR.getCode(),
                                            e.getMessage());
@@ -60,11 +51,6 @@ public class OrderEntity implements Entity<String> {
     //持久化
   }
 
-
-
-
-
-
   /**
    * 最简单的得到自己新的实例
    * 复杂的请使用Factory
@@ -73,6 +59,9 @@ public class OrderEntity implements Entity<String> {
     return DomainFactory.get(OrderEntity.class);
   }
 
-
+  @Override
+  public String getUniqueId() {
+    return null;
+  }
 
 }
