@@ -14,8 +14,8 @@
         <module>ddd-show-code-domain</module>
         <module>ddd-show-code-infrastructure</module>
         <module>ddd-show-code-spi</module>
-        <module>ddd-show-code-biz</module>
-        <module>ddd-show-code-web</module>
+        <module>ddd-show-code-app</module>
+        <module>ddd-show-code-controller</module>
     </modules>
     <packaging>pom</packaging>
 

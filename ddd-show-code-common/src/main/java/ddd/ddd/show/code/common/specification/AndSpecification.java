@@ -2,7 +2,7 @@ package ddd.ddd.show.code.common.specification;
 
 /**
 * AndSpecification
-*date May 18, 2019 5:33:57 PM
+*date May 20, 2019 8:32:41 PM
 */
 public class AndSpecification<T> extends CompositeSpecification<T>{
 

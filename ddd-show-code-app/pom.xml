@@ -9,21 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ddd-show-code-web</artifactId>
+    <artifactId>ddd-show-code-app</artifactId>
 
 
     <dependencies>
-        <!--  app 入口标准-->
         <dependency>
             <groupId>ddd</groupId>
-            <artifactId>ddd-show-code-biz</artifactId>
+            <artifactId>ddd-show-code-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!--  spi 出口标准-->
         <dependency>
             <groupId>ddd</groupId>
-            <artifactId>ddd-show-code-spi</artifactId>
+            <artifactId>ddd-show-code-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
