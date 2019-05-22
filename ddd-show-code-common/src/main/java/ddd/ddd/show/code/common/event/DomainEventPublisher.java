@@ -1,7 +1,7 @@
 package ddd.ddd.show.code.common.event;
 
-import org.ddd.base.domain.DomainEvent;
-import org.ddd.base.domain.DomainEventPublisherI;
+import ddd.base.domain.DomainEvent;
+import ddd.base.domain.DomainEventPublisherI;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

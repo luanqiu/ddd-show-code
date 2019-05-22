@@ -7,17 +7,16 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
+import java.util.List;
 
 import ddd.ddd.show.code.common.exception.DddShowCodeDomainException;
 import ddd.ddd.show.code.common.exception.DddShowCodeSpiException;
 import ddd.ddd.show.code.common.exception.Errors;
-import ddd.ddd.show.code.domain.core.factory.OrderEntityFactory;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * OrderEntity
+ * OrderGoodsEntity
  * !!!important 禁止直接注入该对象，强烈建议get方法
  * date 2019/4/6
  */
@@ -25,17 +24,11 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class OrderEntity implements Entity<String> {
+public class OrderGoodsEntity implements Entity<String> {
 
-  @Resource
-  private OrderEntityFactory orderEntityFactory;
-
-  public OrderEntity createOrder(VO vo) {
+  public OrderGoodsEntity createOrder(VO vo) {
     try {
-      //构造
-      OrderEntity orderEntity = orderEntityFactory.perfect(null);
-      //持久化 insert
-      return orderEntity;
+      return null;
     } catch (DddShowCodeSpiException e) {
       throw new DddShowCodeDomainException(Errors.DEFAULT_PARAM_VALID_ERROR.getCode(),
                                            e.getMessage());
@@ -55,8 +48,8 @@ public class OrderEntity implements Entity<String> {
    * 最简单的得到自己新的实例
    * 复杂的请使用Factory
    */
-  public static final OrderEntity get() {
-    return DomainFactory.get(OrderEntity.class);
+  public static final OrderGoodsEntity get() {
+    return DomainFactory.get(OrderGoodsEntity.class);
   }
 
   @Override
@@ -64,13 +57,17 @@ public class OrderEntity implements Entity<String> {
     return null;
   }
 
-  public void changeOrderPrice() {
+  public void changeGoodsPrice() {
   }
 
-  public void closedOrder() {
+  public List<OrderGoodsEntity> getByOrderId(String orderId) {
+    return null;
   }
 
-  public OrderEntity getByOrderId(String orderId) {
+  public void batchChangeGoodsPrice(List<OrderGoodsEntity> orderGoodsList) {
+  }
+
+  public OrderGoodsEntity getByGoodsId(String orderGoodsId) {
     return null;
   }
 }

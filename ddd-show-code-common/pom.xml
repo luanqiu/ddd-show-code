@@ -66,7 +66,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.ddd</groupId>
+            <groupId>com.github.luanqiu</groupId>
             <artifactId>ddd-base</artifactId>
             <version>${ddd.base.version}</version>
         </dependency>

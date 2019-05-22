@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+import ddd.ddd.show.code.domain.core.aggr.OrderChangeAggr;
 import ddd.ddd.show.code.domain.core.entity.OrderEntity;
 import ddd.ddd.show.code.domain.core.factory.OrderEntityFactory;
 
@@ -14,6 +15,15 @@ import ddd.ddd.show.code.domain.core.factory.OrderEntityFactory;
  */
 @Component
 public class OrderApp {
+
+  /**
+   * 聚合的错误演示
+   */
+  public void changePriceByOrder() {
+    OrderChangeAggr orderChangeAggr = OrderChangeAggr.get();
+    orderChangeAggr.changeOrderPrice();
+    orderChangeAggr.changeGoodsPrice();
+  }
 
   /**
    * 第一种实现方式 ： 直接在应用服务中调用工厂，在调用实体持久化
@@ -33,6 +43,8 @@ public class OrderApp {
   public void createOrderUseEntity() {
     OrderEntity.get().createOrder(null);
   }
+
+
 
 
 }

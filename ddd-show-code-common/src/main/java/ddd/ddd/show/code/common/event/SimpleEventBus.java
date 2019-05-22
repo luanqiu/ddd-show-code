@@ -2,8 +2,8 @@ package ddd.ddd.show.code.common.event;
 
 import com.google.common.eventbus.EventBus;
 
-import org.ddd.base.domain.DomainEvent;
-import org.ddd.base.domain.EventListenerI;
+import ddd.base.domain.DomainEvent;
+import ddd.base.domain.EventListenerI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;

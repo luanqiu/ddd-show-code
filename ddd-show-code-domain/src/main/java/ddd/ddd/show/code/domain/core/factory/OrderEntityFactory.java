@@ -1,7 +1,7 @@
 package ddd.ddd.show.code.domain.core.factory;
 
-import org.ddd.base.domain.DomainFactory;
-import org.ddd.base.domain.VO;
+import ddd.base.domain.DomainFactory;
+import ddd.base.domain.VO;
 import org.springframework.stereotype.Component;
 
 import ddd.ddd.show.code.domain.core.entity.OrderEntity;
