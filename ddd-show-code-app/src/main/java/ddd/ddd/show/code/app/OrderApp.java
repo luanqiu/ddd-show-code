@@ -16,6 +16,10 @@ import ddd.ddd.show.code.domain.core.factory.OrderEntityFactory;
 @Component
 public class OrderApp {
 
+
+
+
+
   /**
    * 聚合的错误演示
    */
