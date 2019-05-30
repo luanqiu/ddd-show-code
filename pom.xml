@@ -16,6 +16,7 @@
         <module>ddd-show-code-spi</module>
         <module>ddd-show-code-app</module>
         <module>ddd-show-code-controller</module>
+        <module>ddd-show-code-resource</module>
     </modules>
     <packaging>pom</packaging>
 
