@@ -30,6 +30,7 @@ public class OrderEntity implements Entity<String> {
   @Resource
   private OrderEntityFactory orderEntityFactory;
 
+
   public OrderEntity createOrder(VO vo) {
     try {
       //构造

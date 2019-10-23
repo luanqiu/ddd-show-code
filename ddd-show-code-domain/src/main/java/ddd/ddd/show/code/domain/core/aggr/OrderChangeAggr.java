@@ -36,9 +36,6 @@ public class OrderChangeAggr implements Aggr<String> {
     return orderId;
   }
 
-  /**
-   * 错误的示范
-   */
   //订单改价
   public void changeOrderPrice() {
     OrderEntity orderEntity = OrderEntity.get().getByOrderId(orderId);
@@ -50,7 +47,6 @@ public class OrderChangeAggr implements Aggr<String> {
     OrderGoodsEntity orderGoodsEntity = OrderGoodsEntity.get().getByGoodsId(orderGoodsId);
     orderGoodsEntity.changeGoodsPrice();
   }
-
 
   /**
    * 推荐的示范
@@ -77,9 +73,12 @@ public class OrderChangeAggr implements Aggr<String> {
     orderEntity.changeOrderPrice();
   }
 
+  //关单
   public void closedOrder() {
-    //关单
+    OrderEntity orderEntity = OrderEntity.get().getByOrderId(orderId);
+    orderEntity.closedOrder();
   }
+
 
   public static OrderChangeAggr get() {
     return DomainFactory.get(OrderChangeAggr.class);
